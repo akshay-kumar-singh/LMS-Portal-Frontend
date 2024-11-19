@@ -3,7 +3,7 @@ import { FaPhone, FaLock } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { login } from '../../services/authService';
 
-const LoginForm = ({ closePopup }) => {
+const LoginForm = ({ closePopup, startForgotPassword }) => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -54,6 +54,12 @@ const LoginForm = ({ closePopup }) => {
       >
         Log In
       </button>
+      <p
+        onClick={startForgotPassword}
+        className="text-center text-white mt-4 underline cursor-pointer"
+      >
+        Forgot Password ?
+      </p>
     </>
   );
 };
