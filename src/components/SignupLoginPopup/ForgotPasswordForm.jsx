@@ -20,9 +20,21 @@ const ForgotPasswordForm = ({ closePopup }) => {
     }
   };
 
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+    return passwordRegex.test(password);
+  };
+  
+
   const handleResetPassword = async () => {
     if (newPassword !== confirmPassword) {
       toast.error('Passwords do not match!');
+      return;
+    }
+    if (!validatePassword(newPassword)) {
+      toast.error(
+        'Password must be at least 8 characters long, include one uppercase letter, one number, and one special character.'
+      );
       return;
     }
   

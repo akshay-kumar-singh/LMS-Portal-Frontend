@@ -25,6 +25,12 @@ const SignupForm = ({ closePopup }) => {
     return () => clearInterval(interval);
   }, [timer, step]);
 
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+    return passwordRegex.test(password);
+  };
+  
+
   const handleSignupStepOne = async (e) => {
     e.preventDefault();
     if (!name || !phone) {
@@ -60,6 +66,15 @@ const SignupForm = ({ closePopup }) => {
     if (!otp || !password || !confirmPassword || !name || !phone) {
       setErrorMessage('All fields are required.');
       toast.error('All fields are required.');
+      return;
+    }
+    if (!validatePassword(password)) {
+      setErrorMessage(
+        'Password must be at least 8 characters long, include one uppercase letter, one number, and one special character.'
+      );
+      toast.error(
+        'Password must be at least 8 characters long, include one uppercase letter, one number, and one special character.'
+      );
       return;
     }
     if (password !== confirmPassword) {
