@@ -1,24 +1,33 @@
-import React, { useState } from 'react';
-import { FaPhone, FaLock } from 'react-icons/fa';
-import { toast } from 'react-toastify';
-import { login } from '../../services/authService';
+import React, { useState } from "react";
+import { FaPhone, FaLock } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { login } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = ({ closePopup, startForgotPassword }) => {
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!phone || !password) {
-      setErrorMessage('Please enter phone and password.');
-      toast.error('Please enter phone and password.');
+      setErrorMessage("Please enter phone and password.");
+      toast.error("Please enter phone and password.");
       return;
     }
     try {
-      await login({ phone, password });
-      toast.success('Login successful!');
+      const decodeToken = await login({ phone, password });
+      toast.success("Login successful!");
       closePopup();
+
+      //check role and redirect
+      if(decodeToken.role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/user');
+      }
     } catch (error) {
       setErrorMessage(error.message);
       toast.error(error.message);
@@ -47,7 +56,9 @@ const LoginForm = ({ closePopup, startForgotPassword }) => {
           className="w-full bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-300 py-2"
         />
       </div>
-      {errorMessage && <p className="text-red-500 text-center">{errorMessage}</p>}
+      {errorMessage && (
+        <p className="text-red-500 text-center">{errorMessage}</p>
+      )}
       <button
         onClick={handleLogin}
         className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md"

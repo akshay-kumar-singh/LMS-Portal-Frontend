@@ -1,4 +1,5 @@
 import api from './api';
+import { jwtDecode } from 'jwt-decode';
 
 export const sendOTP = async (phone) => {
   try {
@@ -27,7 +28,14 @@ export const verifyOTP = async ({ phone, otp, name, password, confirmPassword })
 export const login = async ({ phone, password }) => {
   try {
     const response = await api.post('/login', { phone, password });
-    return response.data;
+    const {token} = response.data;
+
+    //save the token in localstorage
+    localStorage.setItem('token', token);
+
+    //decode token to get role information
+    const decodeToken = jwtDecode(token);
+    return decodeToken;
   } catch (error) {
     throw new Error(error.message);
   }

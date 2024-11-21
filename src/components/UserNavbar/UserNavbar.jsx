@@ -1,12 +1,18 @@
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UserNavbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('token');
+    toast.success('Logout successful!', {
+      position: "top-center",
+      autoClose: 3000,
+    });
+    
     navigate('/');
   };
 
