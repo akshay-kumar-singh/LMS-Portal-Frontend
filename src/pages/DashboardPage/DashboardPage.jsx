@@ -4,10 +4,10 @@ import DashboardSidebar from "../../components/DashboardSidebar/DashboardSidebar
 
 const DashboardPage = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <DashboardSidebar />
 
-      <div className="flex-1 p-4">
+      <div className="flex-1 overflow-y-auto bg-gray-100 p-4">
         <Outlet />
       </div>
     </div>
