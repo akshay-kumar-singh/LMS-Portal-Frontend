@@ -1,6 +1,7 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { SearchProvider } from "./context/SearchContext";
 import PrivateRoute from "./utils/PrivateRoute";
 import HomePage from "./pages/HomePage/HomePage";
 import UserPage from "./pages/UserPage/UserPage";
@@ -8,10 +9,11 @@ import AdminPage from "./pages/AdminPage/AdminPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import AdminDashboardHomePage from "./pages/AdminDashboardHomePage/AdminDashboardHomePage";
 import DashboardCourses from "./pages/DashboardCourses/DashboardCourses";
+import QuestionBanksPage from "./pages/QuestionBanksPage/QuestionBanksPage";
+import QuestionBankDetailPage from "./pages/QuestionBankDetailPage/QuestionBankDetailPage";
 import DashboardLearnersPage from "./pages/DashboardLearnersPage/DashboardLearnersPage";
 import LearnerDetailsPage from "./pages/LearnerDetailsPage/LearnerDetailsPage";
 import LearnerInformationPage from "./pages/LearnerInformationPage/LearnerInformationPage";
-import { SearchProvider } from "./context/SearchContext";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
             <Route path="/admin/dashboard" element={<DashboardPage />}>
               <Route path="home" element={<AdminDashboardHomePage />} />
               <Route path="products/courses" element={<DashboardCourses />} />
+              <Route path="products/questionbanks" element={<QuestionBanksPage />} />
+              <Route path="products/questionbanks/details/:exam" element={<QuestionBankDetailPage />} />
               <Route path="user/learners" element={<DashboardLearnersPage />} />
             </Route>
             <Route path="/user/:id" element={<LearnerDetailsPage />} />

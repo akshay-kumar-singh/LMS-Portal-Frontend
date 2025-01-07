@@ -33,6 +33,36 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
             >
               <FaProductHunt className="mr-2 text-green-500" /> Packages
             </Link>
+            <Link
+              to="/admin/dashboard/products/webinars"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaProductHunt className="mr-2 text-blue-500" /> Webinars
+            </Link>
+            <Link
+              to="/admin/dashboard/products/physicalproducts"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaProductHunt className="mr-2 text-green-500" /> Phisical Products
+            </Link>
+            <h5 className="text-gray-300 font-medium mt-6 mb-4">Contents & Assets</h5>
+            <hr className="border-gray-600 my-2" />
+            <Link
+              to="/admin/dashboard/products/questionbanks"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaProductHunt className="mr-2 text-blue-500" /> Question Banks
+            </Link>
+            <Link
+              to="/admin/dashboard/products/quizzes"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaProductHunt className="mr-2 text-green-500" /> Quizzes
+            </Link>
           </>
         );
       case "membership":

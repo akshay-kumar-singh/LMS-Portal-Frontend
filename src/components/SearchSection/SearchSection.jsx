@@ -13,13 +13,13 @@ const SearchSection = ({ searchOptions }) => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md mb-6">
+    <div className="p-4 rounded-lg mb-6">
       <h3 className="text-gray-700 font-semibold mb-4 text-center md:text-left">Search Learners</h3>
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
         <select
           value={searchBy}
           onChange={handleDropdownChange}
-          className="w-full md:w-48 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-full md:w-48 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
         >
           {searchOptions.map((option) => (
             <option key={option} value={option}>
@@ -32,7 +32,7 @@ const SearchSection = ({ searchOptions }) => {
           placeholder={`Search by ${searchBy}`}
           value={searchQuery}
           onChange={handleInputChange}
-          className="w-full md:flex-grow px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-full md:flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
         />
       </div>
     </div>

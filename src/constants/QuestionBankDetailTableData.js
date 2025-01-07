@@ -1,0 +1,126 @@
+const QuestionBankDetailTableData = [
+    {
+      id: 1,
+      createdOn: "2024-11-20T14:30:00Z",
+      lastUpdated: "2024-12-05T10:15:00Z",
+      createdBy: "Akki",
+      updatedBy: "Aman",
+      textHindi: "दिए गए प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the given question and decide...",
+      fullTextHindi:
+        "दिए गए प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nस्वाती नमिता से कैसे संबन्धित है ?\n\nवक्तव्य:\n1. स्वाती का पति, नमिता कि माँ का इकलौता पुत्र है।\n2. स्वाती का भाई और नमिता, का पति चचेरे भाई हैं।",
+      fullTextEnglish:
+        "Consider the given question and decide which of the following statements is sufficient to answer the question.\n\nHow Swathi is related to Namitha?\n\nStatements:\n1. Swathi’s husband is the only son of Namitha’s mother.\n2. Swathi’s brother and Namitha’s husband are cousins.",
+      usedIn: ["Mock 01", "Mock 02", "Full"],
+      qType: "MCQ",
+      defLevel: "Medium",
+      lang: "English",
+      reference: "Ref1",
+      tags: ["Alp", "Ntpc"],
+      aiGen: true,
+    },
+    {
+      id: 2,
+      createdOn: "2024-11-20T14:30:00Z",
+      lastUpdated: "2024-12-05T10:15:00Z",
+      createdBy: "Jerry",
+      updatedBy: "Softy",
+      textHindi: "दिए गए प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the given question and decide...",
+      fullTextHindi:
+        "दिए गए प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nस्वाती नमिता से कैसे संबन्धित है ?\n\nवक्तव्य:\n1. स्वाती का पति, नमिता कि माँ का इकलौता पुत्र है।\n2. स्वाती का भाई और नमिता, का पति चचेरे भाई हैं।",
+      fullTextEnglish:
+        "Consider the given question and decide which of the following statements is sufficient to answer the question.\n\nHow Swathi is related to Namitha?\n\nStatements:\n1. Swathi’s husband is the only son of Namitha’s mother.\n2. Swathi’s brother and Namitha’s husband are cousins.",
+      usedIn: ["Mock 01", "Mock 02", "Full"],
+      qType: "True/False",
+      defLevel: "Easy",
+      lang: "Hindi",
+      reference: "Ref2",
+      tags: ["MTS", "CHSL"],
+      aiGen: false,
+    },
+    {
+      id: 3,
+      createdOn: "2024-11-20T14:30:00Z",
+      lastUpdated: "2024-12-05T10:15:00Z",
+      createdBy: "Akki",
+      updatedBy: "Aman",
+      textHindi: "दिए गए प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the given question and decide...",
+      fullTextHindi:
+        "दिए गए प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nस्वाती नमिता से कैसे संबन्धित है ?\n\nवक्तव्य:\n1. स्वाती का पति, नमिता कि माँ का इकलौता पुत्र है।\n2. स्वाती का भाई और नमिता, का पति चचेरे भाई हैं।",
+      fullTextEnglish:
+        "Consider the given question and decide which of the following statements is sufficient to answer the question.\n\nHow Swathi is related to Namitha?\n\nStatements:\n1. Swathi’s husband is the only son of Namitha’s mother.\n2. Swathi’s brother and Namitha’s husband are cousins.",
+      usedIn: ["Mock 01", "Mock 02", "Full"],
+      qType: "MCQ",
+      defLevel: "Medium",
+      lang: "English",
+      reference: "Ref1",
+      tags: ["Alp", "Ntpc"],
+      aiGen: true,
+    },
+    // New Demo Questions
+    {
+      id: 4,
+      createdOn: "2024-12-01T14:30:00Z",
+      lastUpdated: "2024-12-10T10:00:00Z",
+      createdBy: "Nina",
+      updatedBy: "Ravi",
+      textHindi: "यह प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the following question and decide...",
+      fullTextHindi:
+        "यह प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nसुमिता और राकेश के बीच क्या संबंध है?\n\nवक्तव्य:\n1. सुमिता की बहन राकेश की पत्नी है।\n2. सुमिता और राकेश भाई-बहन हैं।",
+      fullTextEnglish:
+        "Consider the following question and decide which of the following statements is sufficient to answer the question.\n\nWhat is the relationship between Sumita and Rakesh?\n\nStatements:\n1. Sumita’s sister is Rakesh’s wife.\n2. Sumita and Rakesh are siblings.",
+      usedIn: ["Mock 03", "Mock 04", "Full"],
+      qType: "MCQ",
+      defLevel: "Hard",
+      lang: "Hindi",
+      reference: "Ref3",
+      tags: ["Bank", "RRB"],
+      aiGen: true,
+    },
+    {
+      id: 5,
+      createdOn: "2024-12-02T14:30:00Z",
+      lastUpdated: "2024-12-12T10:15:00Z",
+      createdBy: "John",
+      updatedBy: "Priya",
+      textHindi: "इस प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the following question and decide...",
+      fullTextHindi:
+        "इस प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nअजय और पूजा के बीच क्या संबंध है?\n\nवक्तव्य:\n1. अजय का भाई पूजा के पति का छोटा भाई है।\n2. पूजा का भाई अजय के पिता का बड़ा भाई है।",
+      fullTextEnglish:
+        "Consider the following question and decide which of the following statements is sufficient to answer the question.\n\nWhat is the relationship between Ajay and Pooja?\n\nStatements:\n1. Ajay’s brother is the younger brother of Pooja’s husband.\n2. Pooja’s brother is the elder brother of Ajay’s father.",
+      usedIn: ["Mock 02", "Mock 05", "Full"],
+      qType: "True/False",
+      defLevel: "Medium",
+      lang: "English",
+      reference: "Ref4",
+      tags: ["SSC", "CGL"],
+      aiGen: true,
+    },
+    {
+      id: 6,
+      createdOn: "2024-12-03T14:30:00Z",
+      lastUpdated: "2024-12-13T10:15:00Z",
+      createdBy: "Aditi",
+      updatedBy: "Suresh",
+      textHindi: "यह प्रश्न पर विचार करें और निर्णय लें...",
+      textEnglish: "Consider the following question and decide...",
+      fullTextHindi:
+        "यह प्रश्न पर विचार करें और निर्णय लें कि प्रश्न का उत्तर देने के लिए निम्न में से कौन सा कथन पर्याप्त हैं।\n\nदीपिका और राघव के बीच क्या संबंध है?\n\nवक्तव्य:\n1. दीपिका की बहन राघव की पत्नी है।\n2. दीपिका और राघव पति-पत्नी हैं।",
+      fullTextEnglish:
+        "Consider the following question and decide which of the following statements is sufficient to answer the question.\n\nWhat is the relationship between Deepika and Raghav?\n\nStatements:\n1. Deepika’s sister is Raghav’s wife.\n2. Deepika and Raghav are husband and wife.",
+      usedIn: ["Mock 06", "Mock 07", "Full"],
+      qType: "MCQ",
+      defLevel: "Easy",
+      lang: "Hindi",
+      reference: "Ref5",
+      tags: ["UPSC", "IAS"],
+      aiGen: false,
+    },
+  ];
+  
+  export default QuestionBankDetailTableData;
+  
