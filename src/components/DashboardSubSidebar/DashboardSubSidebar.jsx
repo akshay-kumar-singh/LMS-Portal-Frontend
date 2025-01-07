@@ -21,14 +21,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/products/courses"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaProductHunt className="mr-2 text-blue-500" /> Courses
             </Link>
             <Link
               to="/admin/dashboard/products/packages"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaProductHunt className="mr-2 text-green-500" /> Packages
@@ -40,14 +40,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/membership/active"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaUsers className="mr-2 text-yellow-500" /> Active Members
             </Link>
             <Link
               to="/admin/dashboard/membership/expired"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaUsers className="mr-2 text-red-500" /> Expired Memberships
@@ -59,14 +59,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/community/forums"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaBriefcase className="mr-2 text-purple-500" /> Forums
             </Link>
             <Link
               to="/admin/dashboard/community/groups"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaHandshake className="mr-2 text-teal-500" /> Groups
@@ -78,14 +78,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/reports/overview"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaChartLine className="mr-2 text-indigo-500" /> Overview
             </Link>
             <Link
               to="/admin/dashboard/reports/analytics"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaChartLine className="mr-2 text-pink-500" /> Analytics
@@ -97,24 +97,49 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/user/learners"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaUser className="mr-2 text-blue-400" /> Learners
             </Link>
             <Link
               to="/admin/dashboard/user/admins"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaUser className="mr-2 text-green-400" /> Admins
             </Link>
             <Link
               to="/admin/dashboard/user/instructors"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaUser className="mr-2 text-yellow-400" /> Instructors
+            </Link>
+            <Link
+              to="/admin/dashboard/user/affiliates"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaUser className="mr-2 text-yellow-400" /> Affiliates
+            </Link>
+
+            {/* User Tools Subheading */}
+            <h5 className="text-gray-300 font-medium mt-6 mb-4">Tenant Onboarding</h5>
+            <hr className="border-gray-600 my-2" />
+            <Link
+              to="/admin/dashboard/tenant-onboarding/tenants"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaChartLine className="mr-2 text-purple-400" /> Tenants
+            </Link>
+            <Link
+              to="/admin/dashboard/tenant-onboarding/plans"
+              onClick={() => onLinkClick()}
+              className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
+            >
+              <FaCogs className="mr-2 text-red-400" /> Plans
             </Link>
           </>
         );
@@ -123,14 +148,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/asset-library/images"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaRegImages className="mr-2 text-pink-400" /> Images
             </Link>
             <Link
               to="/admin/dashboard/asset-library/videos"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaRegWindowMaximize className="mr-2 text-teal-400" /> Videos
@@ -142,14 +167,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/website-apps/themes"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaRegWindowMaximize className="mr-2 text-orange-400" /> Themes
             </Link>
             <Link
               to="/admin/dashboard/website-apps/plugins"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaRegWindowMaximize className="mr-2 text-blue-400" /> Plugins
@@ -161,14 +186,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/marketing/campaigns"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaBullhorn className="mr-2 text-yellow-600" /> Campaigns
             </Link>
             <Link
               to="/admin/dashboard/marketing/email"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaBullhorn className="mr-2 text-red-600" /> Email Marketing
@@ -180,14 +205,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/integration/api"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaCogs className="mr-2 text-indigo-600" /> API Integrations
             </Link>
             <Link
               to="/admin/dashboard/integration/webhooks"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaCogs className="mr-2 text-purple-600" /> Webhooks
@@ -199,14 +224,14 @@ const DashboardSubSidebar = ({ section, onLinkClick }) => {
           <>
             <Link
               to="/admin/dashboard/settings/payments"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaCogs className="mr-2 text-blue-600" /> Payments
             </Link>
             <Link
               to="/admin/dashboard/settings/security"
-              onClick={() => onLinkClick()} 
+              onClick={() => onLinkClick()}
               className="flex items-center text-gray-400 hover:bg-gray-600 p-3 rounded-lg transition-all duration-300 hover:text-white mb-2"
             >
               <FaCogs className="mr-2 text-red-600" /> Security
