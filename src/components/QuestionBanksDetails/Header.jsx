@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { AiOutlineImport } from "react-icons/ai";
 import ImportQuestionsPopup from "./ImportQuestionsPopup";
+import NewQuestionPopup from "./NewQuestionPopup";
 
 const Header = ({ questionBank }) => {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [isNewQuestionPopupVisible, setNewQuestionPopupVisible] = useState(false);
 
   const showPopup = () => {
     setPopupVisible(true);
@@ -10,6 +13,14 @@ const Header = ({ questionBank }) => {
 
   const hidePopup = () => {
     setPopupVisible(false);
+  };
+
+  const showNewQuestionPopup = () => {
+    setNewQuestionPopupVisible(true);
+  };
+
+  const hideNewQuestionPopup = () => {
+    setNewQuestionPopupVisible(false);
   };
 
   return (
@@ -28,17 +39,18 @@ const Header = ({ questionBank }) => {
         </div>
 
         <div className="flex items-center space-x-6">
-          <button
-            className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition duration-300 ease-in-out"
+        <button
+            className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition duration-300 ease-in-out flex items-center space-x-2"
             onClick={showPopup}
           >
-            Import Question
+            <AiOutlineImport size={20} />
+            <span>Import Question</span>
           </button>
           <button
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition duration-300 ease-in-out"
-            onClick={() => console.log("New Question")}
+            onClick={showNewQuestionPopup}
           >
-            New Question
+            + New Question
           </button>
         </div>
       </div>
@@ -52,6 +64,7 @@ const Header = ({ questionBank }) => {
         </p>
       </div>
       <ImportQuestionsPopup isVisible={isPopupVisible} onClose={hidePopup} />
+      <NewQuestionPopup isVisible={isNewQuestionPopupVisible} onClose={hideNewQuestionPopup} />
     </div>
   );
 };
